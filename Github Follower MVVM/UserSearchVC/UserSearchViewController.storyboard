@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Sx-id-LeR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Search View Controller-->
+        <scene sceneID="fgG-sG-gm9">
+            <objects>
+                <viewController id="5Sx-id-LeR" customClass="UserSearchViewController" customModule="Github_Follower_VIP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpu-bi-RZM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gh-logo-dark" translatesAutoresizingMaskIntoConstraints="NO" id="glV-04-yCn">
+                                <rect key="frame" x="107" y="172" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1gp-4p-W3x"/>
+                                    <constraint firstAttribute="height" constant="200" id="bXt-i2-HS2"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYr-0A-Ezr">
+                                <rect key="frame" x="52" y="753" width="310" height="52"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="64a-Ka-v0D"/>
+                                </constraints>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchTapped:" destination="5Sx-id-LeR" eventType="touchUpInside" id="ohm-16-aqw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZs-E9-gOb">
+                                <rect key="frame" x="52" y="431" width="310" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ogW-UZ-5Zu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dYi-N5-GqZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lZs-E9-gOb" firstAttribute="leading" secondItem="dYi-N5-GqZ" secondAttribute="leading" constant="52" id="1lC-w3-RvH"/>
+                            <constraint firstItem="glV-04-yCn" firstAttribute="centerX" secondItem="dYi-N5-GqZ" secondAttribute="centerX" id="Ib5-rx-GUh"/>
+                            <constraint firstItem="glV-04-yCn" firstAttribute="top" secondItem="dYi-N5-GqZ" secondAttribute="top" constant="128" id="Imv-Xw-cQd"/>
+                            <constraint firstItem="lZs-E9-gOb" firstAttribute="top" secondItem="glV-04-yCn" secondAttribute="bottom" constant="59" id="LPY-nL-SVG"/>
+                            <constraint firstItem="dYr-0A-Ezr" firstAttribute="leading" secondItem="dYi-N5-GqZ" secondAttribute="leading" constant="52" id="T1Q-rQ-aGR"/>
+                            <constraint firstItem="dYi-N5-GqZ" firstAttribute="bottom" secondItem="dYr-0A-Ezr" secondAttribute="bottom" constant="57" id="YjH-Xc-l2H"/>
+                            <constraint firstItem="dYi-N5-GqZ" firstAttribute="trailing" secondItem="lZs-E9-gOb" secondAttribute="trailing" constant="52" id="k5T-Gm-P7y"/>
+                            <constraint firstItem="dYi-N5-GqZ" firstAttribute="trailing" secondItem="dYr-0A-Ezr" secondAttribute="trailing" constant="52" id="zRh-pw-ddr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="lZs-E9-gOb" id="dGA-R5-aKP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BC8-nF-lqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="-41"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gh-logo-dark" width="554" height="554"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
